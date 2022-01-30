@@ -1,0 +1,34 @@
+body{width: 100%;height: 100vh;display: flex;justify-content: center;align-items: center;margin: 0;padding: 0;font-family: "Montserrat",sans-serif;}
+*{
+  box-sizing: border-box;
+}
+
+
+.container{height: 90%;width: 28%;border-radius: 30px;box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.27);}
+@media (max-width: 768px) {
+  .container{width: 95%;}
+}
+.container__header{width: 100%;height: 75%;transition: all 1s cubic-bezier(.215, .61, .355, 1);padding: 20px;;position: relative;text-align: center;z-index: 1;display: flex;justify-content: space-between;;align-items: center;flex-direction: column;}
+.container__header::after{
+  content: " ";
+  width: 100%;height: 100%;;position: absolute;top: 0;left: 0;
+  background: #000;z-index: 2;opacity: 0.4
+}
+.sfondoHeader{position: absolute;top: 0;left: 0;height: 100%;width: 100%;object-fit: cover;}
+.container__header p, h3{z-index: 3;position: relative;color: #fff;font-weight: bold;}
+.container__header h3{font-size: 40px;font-weight: bold;margin: 0;padding: 0}
+
+
+.container__content{width: 100%;height: 0;transition: all 1s cubic-bezier(.215, .61, .355, 1);display: flex;background: #fff;justify-content: center;align-items: center;flex-direction: column;padding: 30px 40px;}
+.container__content__weatherContent{width: 95%;height: 50px;padding: 10px;display: flex;justify-content: space-between;align-items: center;}
+.container__content__weatherContent p{font-weight: bold;font-size: 20px;color: #000}
+.temperature-group{display: flex;justify-content: center;align-items: center;}
+.temperature-group p{font-weight: bold;color: lime}
+.temperature-group img{padding: 10px;width: 100px;height: auto;}
+
+
+.container__search{width: 100%;height: 15%;display: flex;justify-content: center;align-items: center;padding: 10px;background: #fff}
+.form{width: 90%;height: 60%;display: flex;justify-content: space-between;align-items: center;}
+.form-textinput{width: 80%;height: 100%;padding-left: 10px;border-radius: 10px 0 0 10px;box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.27);border: none}
+.form-button{height: 100%;width: 20%;border-radius: 0 10px 10px 0;background: lightblue;font-size: 20px;font-weight: bold;border: none;box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.27);}
+input:focus{outline: none}
